@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 在IE中运行最新的渲染模式 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Recommended System</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script><!-- 针对IE9以下浏览器-->
+
+	<style type="text/css">
+		body{
+			padding-top: 100px;
+			padding-bottom: 50px;
+		}
+
+		#summary-container .col-md-6{
+			text-align: center;
+		}
+		.navForm{
+			margin: 10px 10px 0 0;
+		}
+		hr.divider{
+			margin: 40px 0;
+		}
+		p.checked{
+			margin: 30px 0 10px 0;
+		}
+		.listGap{
+			margin-top: 20px;
+		}
+		.wrapper{
+			margin-top: 20px;
+		}
+		.insideForm{
+			margin-bottom: -2px;
+			padding: 6px;
+		}
+		.compareBtn{
+			margin-right: 15px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container_bootstrap">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-navbar">
+					<span class="sr-only">导航切换</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">推荐系统</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="demo-navbar">
+				<ul class="nav navbar-nav">
+					<li><a href="recommended system.html">推荐</a></li>
+					<li><a href="abTest.html">ABTest</a></li>
+					<li class="active"><a href="recommend.html">结果</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#about">关于</a></li><!--模态窗口的实现-->
+				</ul>
+				<form class="form-inline pull-right navForm">
+					<div class="form-group">
+						<label for="Email" style="color:#999">User Name</label>
+						<input type="text" class="form-control" id="Email" placeholder="UserName/Email">
+					</div>
+					<div class="form-group">
+						<label for="Password" style="color:#999">Password</label>
+						<input type="password" class="form-control" id="Password" placeholder="Password">
+					</div>
+					<button type="submit" class="btn btn-default">Sign in</button>
+					<button type="submit" class="btn btn-primary">Sign up</button>
+				</form>
+			</div>
+		</div>
+	</nav><!--nav结束-->
+
+	<div class="container" id="summary-container">
+		<div class="row">
+			<div class="col-md-6">
+				<form role="form" class="form-inline">
+					<div class="form-group" > 
+						<label for="algorithm" style="color:#999">请选择算法：</label>
+						<select id="algorithm" class="form-control">
+							<option>A algorithm</option>
+							<option>B algorithm</option> 
+							<option>C algorithm</option>
+							<option>D algorithm</option>
+						</select> 
+					</div>
+				</form>
+				<!-- <ul class="list-group listGap">
+					<li class="list-group-item">
+						<form role="form">
+							<div class="form-group form-inline">
+								<label for="Email" style="color:#999">正确率：</label>
+								<input type="text" class="form-control" id="Email" placeholder="0%">
+							</div>
+						</form> 
+					</li>
+					<li class="list-group-item">
+						<div class="form-group form-inline">
+							<label for="Email" style="color:#999">召回率：</label>
+							<input type="text" class="form-control" id="Email" placeholder="0%">
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="form-group form-inline">
+							<label for="Email" style="color:#999">用户数：</label>
+							<input type="text" class="form-control" id="Email" placeholder="0">
+						</div>
+					</li>
+				</ul> -->
+				<div class="wrapper">
+					<form role="form">
+					<div class="form-group form-inline">
+						<label for="Email" style="color:#999">正确率：</label>
+						<input type="text" class="form-control" id="Email" placeholder="0%">
+					</div>
+				</form> 
+				<form role="form">
+					<div class="form-group form-inline">
+						<label for="Email" style="color:#999">召回率：</label>
+						<input type="text" class="form-control" id="Email" placeholder="0%">
+					</div>
+				</form> 
+				<form role="form">
+					<div class="form-group form-inline">
+						<label for="Email" style="color:#999">用户数：</label>
+						<input type="text" class="form-control" id="Email" placeholder="0">
+					</div>
+				</form> 
+				<form role="form">
+					<div class="form-group form-inline">
+						<label for="Email" style="color:#999">ROC值：</label>
+						<input type="text" class="form-control" id="Email" placeholder="0">
+					</div>
+				</form> 
+				</div>
+			</div>
+			<div class="col-md-6">
+				<form role="form" class="form-inline">
+					<div class="form-group" > 
+						<label for="algorithm" style="color:#999">请选择算法：</label>
+						<select id="algorithm" class="form-control">
+							<option>A algorithm</option>
+							<option>B algorithm</option>
+							<option>C algorithm</option>
+							<option>D algorithm</option> 
+						</select> 
+					</div>
+				</form>	
+				<ul class="list-group listGap">
+					<li class="list-group-item">
+						<form role="form">
+							<div class="form-group form-inline insideForm">
+								<label for="Email" style="color:#999">正确率：</label>
+								<input type="text" class="form-control" id="Email" placeholder="0%">
+							</div>
+						</form> 
+					</li>
+					<li class="list-group-item">
+						<div class="form-group form-inline insideForm">
+							<label for="Email" style="color:#999">召回率：</label>
+							<input type="text" class="form-control" id="Email" placeholder="0%">
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="form-group form-inline insideForm">
+							<label for="Email" style="color:#999">用户数：</label>
+							<input type="text" class="form-control" id="Email" placeholder="0">
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="form-group form-inline insideForm">
+							<label for="Email" style="color:#999">ROC值：</label>
+							<input type="text" class="form-control" id="Email" placeholder="0">
+						</div>
+					</li>
+				</ul>
+			</div>
+			<button class="btn btn-lg btn-primary pull-right compareBtn">对比</button>
+		</div>
+		<hr class="divider">
+
+		<div class="footer">
+			<p class="pull-right">
+				<a href="#top" class="glyphicon glyphicon-hand-up">回到顶部</a>
+			</p>
+			<p>© 12/02/2015 WYL</p>
+		</div>
+
+		
+
+	</div>
+
+
+	<div class="modal fade" id="about">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">关于</h4>
+				</div>
+				<div class="modal-body">
+					<p>Elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh mollis euismod. Donec sed odio dui.Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh mollis euismod. Donec sed odio dui.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">了解了</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/rs.js"></script>
+</body>
+</html>

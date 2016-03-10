@@ -1,0 +1,2 @@
+1.name each ajax id;
+2.选项卡的问题；
